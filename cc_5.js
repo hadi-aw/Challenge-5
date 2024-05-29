@@ -11,4 +11,17 @@ class Employee {
   get annualSalary() {
     return this.salary * 12;
   }
+
+  //Create Manager subclass with bonus calculation
+  
+class Manager extends Employee {
+  constructor(name, salary, department) {
+    super(name, salary);
+    this.department = department;
+  }
+
+  get annualSalary() {
+    const bonus = this.salary * 0.15;
+    return this.salary * 12 + bonus;
+  }
 }
